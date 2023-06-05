@@ -59,7 +59,12 @@ const getDocbySpecificField = async () => {
   const result = await stu.find({ name: "Sumit" });
   console.log(result);
 };
+const getDocbySpecificFields = async () => {
+  const result = await stu.find({ name: "Sumit" }).select("name age hobbies");
+  console.log(result);
+};
 getDocbySpecificField();
+getDocbySpecificFields();
 
 app.listen(port, () => {
   console.log(`Your server is running at the port http://localhost:${port}`);
