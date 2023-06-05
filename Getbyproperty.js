@@ -63,6 +63,13 @@ const getDocbySpecificFields = async () => {
   const result = await stu.find({ name: "Sumit" }).select("name age hobbies");
   console.log(result);
 };
+const getDocLimit = async () => {
+  const result = await stu.find().limit(2);
+  console.log(result);
+};
+getDocLimit();
+
+
 getDocbySpecificField();
 getDocbySpecificFields();
 
